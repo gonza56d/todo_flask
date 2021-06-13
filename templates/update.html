@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master with Flask | Update task</title>
+{% endblock %}
+
+{%block body %}
+
+<form class="row justify-content-center" action="/update/{{ task.id }}" method="POST">
+    <input class="form-control col-12 col-md-3" type="text" name="content" id="content" value="{{ task.content }}">
+    <button class="btn btn-success col-12 col-md-2 ml-md-1">
+        <i class="fas fa-sync-alt"></i>
+        Update task
+    </button>
+</form>
+
+{% endblock %}
